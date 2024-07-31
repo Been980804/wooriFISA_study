@@ -1,5 +1,7 @@
 package running;
 
+import java.util.Date;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 

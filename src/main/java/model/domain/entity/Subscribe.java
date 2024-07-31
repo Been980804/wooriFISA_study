@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
 import lombok.AllArgsConstructor;
@@ -39,10 +39,10 @@ public class Subscribe {
 	
 	@NonNull
 	@JoinColumn(name = "mem_id", nullable = false)
-	@ManyToOne
+	@OneToOne
 	private Member memId;
 	@NonNull
-	@ManyToOne
+	@OneToOne
 	@JoinColumn(name = "prod_id", nullable = false)
 	private Product prodId;
 	@NonNull
@@ -52,5 +52,5 @@ public class Subscribe {
 	@Column(name = "sub_period", nullable = false)
 	private int period;
 	@NonNull
-	private int startDate; 
+	private int startDate;
 }
