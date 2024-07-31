@@ -41,7 +41,8 @@
 <br/>
 
 ## :floppy_disk: ER 다이어그램
-![er](https://github.com/user-attachments/assets/adedb1f6-cbcb-40ea-9e66-fb537fd3ef55)
+![image](https://github.com/user-attachments/assets/1610529d-7595-425a-8699-703a8f085a5d)
+
 
 ### Member 테이블
 ### Product 테이블
