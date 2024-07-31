@@ -19,7 +19,7 @@ public class DBUtil {
 	
 	static {
 		// properties.xml 로딩되면서 DBinfo 키와 매핑된 설정 정보로
-		// tableㅅ 생성
+		// table 생성
 		emf = Persistence.createEntityManagerFactory("dbinfo");
 	}
 

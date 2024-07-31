@@ -51,6 +51,6 @@ public class Subscribe {
 	@NonNull
 	@Column(name = "sub_period", nullable = false)
 	private int period;
-	
+	@NonNull
 	private int startDate;
 }
