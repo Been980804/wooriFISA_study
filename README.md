@@ -75,7 +75,7 @@ SELECT * FROM SUBSCRIBE;
 ```sql
 SELECT s.SUB_ID, m.MEM_NAME, p.PROD_NAME, p.PROD_PRICE
 FROM SUBSCRIBE s
-JOIN "MEMBER" m ON s.MEM_ID = m.MEM_ID 
+JOIN MEMBER m ON s.MEM_ID = m.MEM_ID 
 JOIN PRODUCT p ON s.PROD_ID = p.PROD_ID;
 ```
 ![result](https://github.com/user-attachments/assets/a950f4c7-74ff-4fea-8bfe-fc19a049144c)
