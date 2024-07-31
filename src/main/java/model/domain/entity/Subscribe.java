@@ -38,8 +38,8 @@ public class Subscribe {
 	private int subId;
 	
 	@NonNull
-	@JoinColumn(name = "mem_id", nullable = false)
 	@OneToOne
+	@JoinColumn(name = "mem_id", nullable = false)
 	private Member memId;
 	@NonNull
 	@OneToOne
@@ -52,5 +52,5 @@ public class Subscribe {
 	@Column(name = "sub_period", nullable = false)
 	private int period;
 	@NonNull
-	private int startDate;
+	private String startDate;
 }

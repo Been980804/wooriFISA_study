@@ -1,7 +1,5 @@
 package model.domain.entity;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -41,6 +39,7 @@ public class Member {
 	@NonNull
 	@Column(name = "mem_email", nullable = false, length = 30)
 	private String memEmail;
+	@NonNull
 	@Column(name = "mem_birth")
-	private Date memBirth;
+	private String memBirth;
 }
