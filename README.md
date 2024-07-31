@@ -98,7 +98,7 @@ JOIN PRODUCT p ON s.PROD_ID = p.PROD_ID;
 <br/>
 
 ### [이현빈](https://github.com/been980804)
-> 
+> Entity객체를 생성하여 클래스간의 Join관계를 생성하면서 OneToOne, ManyToOne, OneToMany 를 고민하며 다시금 테이블간의 관계를 학습할 수 있었습니다.
 <br/>
 
 ### [이승준](https://github.com/leesj000603)
