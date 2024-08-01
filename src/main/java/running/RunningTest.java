@@ -4,6 +4,7 @@ package running;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 
 import org.junit.Test;
 
@@ -60,7 +61,7 @@ public class RunningTest {
 		em = null;
 	}
 	
-	@Test
+	//@Test
 	public void AllSubscribe() {
 		EntityManager em = DBUtil.getEntityManager();
 
@@ -74,17 +75,51 @@ public class RunningTest {
 		em = null;
 	}
 	
-//	@Test
+	@Test
 	public void findTest() {
-		EntityManager em = DBUtil.getEntityManager();
-
-		Subscribe s = em.find(Subscribe.class, 2);
-		System.out.println(s.getSubId() + " " + 
-						   s.getMemId().getMemName() + " " + 
-						   s.getProdId().getProdName() + " " + 
-						   s.getProdId().getProdPrice());
+		EntityManager em = null;
+		EntityTransaction tx = null;
 		
-		em.close();
-		em = null;
+		try {
+			em = DBUtil.getEntityManager();
+			tx = em.getTransaction();
+			
+			// Select: 첫 번째 구독 플랜의 유저 정보 조회
+			Subscribe s = em.find(Subscribe.class, 1);
+			System.out.println(s.getSubId() + " " + 
+							   s.getMemId().getMemName() + " " + 
+							   s.getProdId().getProdName() + " " + 
+							   s.getProdId().getProdPrice());
+			
+			tx.begin();
+			
+			// Update: 첫 번째 구독 플랜의 상품 정보 변경
+			Product p = em.find(Product.class, 2);
+			s.setProdId(p);
+			tx.commit();
+			
+			System.out.println(s.getSubId() + " " + 
+					   s.getMemId().getMemName() + " " + 
+					   s.getProdId().getProdName() + " " + 
+					   s.getProdId().getProdPrice());
+			
+			// Delete: 첫 번째 구독 플랜 삭제
+			em.remove(s);
+			
+			System.out.println(s.getSubId() + " " + 
+					   s.getMemId().getMemName() + " " + 
+					   s.getProdId().getProdName() + " " + 
+					   s.getProdId().getProdPrice());
+			
+		} catch(Exception e) {
+			tx.rollback();
+			e.printStackTrace();
+		} finally {
+			if(em != null) {
+				em.close();
+				em = null;
+			}
+		}
+
 	}
 }
