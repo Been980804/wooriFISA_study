@@ -96,7 +96,7 @@ JOIN PRODUCT p ON s.PROD_ID = p.PROD_ID;
 <br/>
 
 ### [조성현](https://github.com/cshharry)
-> 
+> 객체를 통해 간접적으로 DB를 관리해보며 양방향 관계를 설정할 때  두 엔티티의 관계를 올바르게 설정해야 함을 깨달았고, 복잡한 매핑 관계를 더 많이 실습해봐야겠습니다.
 <br/>
 
 ### [이현빈](https://github.com/been980804)
