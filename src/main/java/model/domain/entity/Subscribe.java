@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
@@ -38,11 +39,11 @@ public class Subscribe {
 	private int subId;
 	
 	@NonNull
+	@ManyToOne
 	@JoinColumn(name = "mem_id", nullable = false)
-	@OneToOne
 	private Member memId;
 	@NonNull
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "prod_id", nullable = false)
 	private Product prodId;
 	@NonNull
@@ -52,5 +53,5 @@ public class Subscribe {
 	@Column(name = "sub_period", nullable = false)
 	private int period;
 	@NonNull
-	private int startDate;
+	private String startDate;
 }

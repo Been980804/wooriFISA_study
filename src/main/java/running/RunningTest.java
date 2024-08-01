@@ -1,5 +1,6 @@
 package running;
 
+
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -19,14 +20,32 @@ public class RunningTest {
 
 		List<Member> members = em.createQuery("SELECT m FROM Member m", Member.class).getResultList();
 		
+
 		for(Member m : members) {
 			System.out.println(m);
-		}
+
+//		try {
+//			em = DBUtil.getEntityManager();
+//			tx = em.getTransaction();
+//			tx.begin();
+//			
+//			tx.commit();
+//			
+//		}catch(Exception e) {
+//			tx.rollback();
+//			e.printStackTrace();
+//		}finally {
+//			if(em != null) {
+//				em.close();
+//				em = null;
+//			}
+//
+//		}
 		
 		em.close();
 		em = null;
+		}
 	}
-	
 //	@Test
 	public void AllProduct() {
 		EntityManager em = DBUtil.getEntityManager();
@@ -41,7 +60,7 @@ public class RunningTest {
 		em = null;
 	}
 	
-//	@Test
+	@Test
 	public void AllSubscribe() {
 		EntityManager em = DBUtil.getEntityManager();
 
@@ -55,7 +74,7 @@ public class RunningTest {
 		em = null;
 	}
 	
-	@Test
+//	@Test
 	public void findTest() {
 		EntityManager em = DBUtil.getEntityManager();
 
