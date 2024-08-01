@@ -1,14 +1,12 @@
 # WooriFISA Week4 데일리 미션 : JPA Join 활용
 
-<br/>
-
 <details>
   <summary>목차</summary>  
   
   - [수행 과제](#notebook-수행-과제)
   - [팀원](#raising_hand-팀원)
   - [주제](#memo-주제)
-  - [실습환경](rocket-#실습환경)
+  - [실습환경](#rocket-#실습환경)
   - [ER 다이어그램](#floppy_disk-ER-다이어그램)
   - [실행](#globe_with_meridians-실행)
   - [트러블슈팅](#hammer-트러블슈팅)
@@ -16,8 +14,11 @@
 
 </details>
 
+<br/>
+
 ## :notebook: 수행 과제
 - JPA Join 사용
+- OJT 문제 제출
 
 <br/>
 
@@ -41,9 +42,7 @@
 <br/>
 
 ## :floppy_disk: ER 다이어그램
-![image](https://github.com/user-attachments/assets/03e67829-ee70-40e2-9eac-0dcd8bdc40d2)
-
-
+![erderd](https://github.com/user-attachments/assets/b8b8895d-1b51-468d-b6e3-2386b3cc8390)
 
 ### Member 테이블
 ### Product 테이블
@@ -55,22 +54,21 @@
 ```sql
 SELECT * FROM MEMBER;
 ```
-![mem](https://github.com/user-attachments/assets/87aec6e7-8f0e-4d67-95e7-aca10278be4b)
+![image (3)](https://github.com/user-attachments/assets/bcbbc211-ed71-4c75-bae0-8a44c34fcdc6)
 
 <br/>
 
 ```sql
 SELECT * FROM PRODUCT;
 ```
-![product](https://github.com/user-attachments/assets/8908170f-3806-46c6-9288-daefd56a91bf)
+![image (6)](https://github.com/user-attachments/assets/ba5b5795-e373-4755-810c-ad9178db3789)
 
 <br/>
 
 ```sql
 SELECT * FROM SUBSCRIBE;
 ```
-
-![sub](https://github.com/user-attachments/assets/51f671f3-8013-4ef9-83cb-3c6a7503ed4d)
+![image (2)](https://github.com/user-attachments/assets/385e8b11-73ee-4c9e-b13c-ecfef5c13b0a)
 
 <br/>
 
@@ -80,19 +78,13 @@ FROM SUBSCRIBE s
 JOIN MEMBER m ON s.MEM_ID = m.MEM_ID 
 JOIN PRODUCT p ON s.PROD_ID = p.PROD_ID;
 ```
-![result](https://github.com/user-attachments/assets/a950f4c7-74ff-4fea-8bfe-fc19a049144c)
-
-<br/>
-
-## :hammer: 트러블슈팅
-
-
+![image (4)](https://github.com/user-attachments/assets/2332e636-b91e-4270-ad83-f43bf648ad5c)
 
 <br/>
 
 ## :thought_balloon: 회고
 ### [허예은](https://github.com/yyyeun)
-> 
+> 직접 Entity와 그 관계를 설계하며 Join에 대한 이해도를 높일 수 있었습니다. OJT 문제를 출제하며 활용했던 Core 개념이 기억에 오래 남을 것 같습니다.
 <br/>
 
 ### [조성현](https://github.com/cshharry)
