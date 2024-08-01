@@ -54,7 +54,8 @@
 ```sql
 SELECT * FROM MEMBER;
 ```
-![image (3)](https://github.com/user-attachments/assets/bcbbc211-ed71-4c75-bae0-8a44c34fcdc6)
+![image](https://github.com/user-attachments/assets/f9eca450-89ec-4d66-9f91-7ed073b69d9e)
+
 
 <br/>
 
