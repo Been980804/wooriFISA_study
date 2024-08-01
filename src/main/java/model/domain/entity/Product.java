@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 
 import lombok.AllArgsConstructor;
@@ -36,7 +36,7 @@ public class Product {
 	@Column(name = "prod_id")
 	private int prodId;
 	@NonNull
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "mem_id", nullable = false)
 	private Member memId; 
 	@NonNull
