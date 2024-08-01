@@ -104,5 +104,5 @@ JOIN PRODUCT p ON s.PROD_ID = p.PROD_ID;
 <br/>
 
 ### [이승준](https://github.com/leesj000603)
-> 
+> JPA를 통해 java 객체와 Oracle의 테이블을 매핑하고, OneToMany,ManyToOne,OneToOne 등의 관계설정을 통해 ORM과 데이터베이스에 대한 이해를 높일 수 있었습니다.
 <br/>
