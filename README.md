@@ -83,6 +83,18 @@ JOIN PRODUCT p ON s.PROD_ID = p.PROD_ID;
 
 <br/>
 
+## ❓문제
+
+### 1. 빈칸을 채워 각 Entity간의 관계(Join)를 설정하시오. (위에 있는 테이블과 ERD를 참고하시오.) - Product, Subscribe
+![image](https://github.com/user-attachments/assets/438f89ec-0aaf-4f6d-a94a-282144c83a3d)
+__________________________________________________________________________________________________________________
+![image](https://github.com/user-attachments/assets/85b13e98-53ef-4aa6-bdaa-a2a9c5e58e88)
+
+### 2. 주석을 참고해 빈칸을 채워 코드를 완성하시오.
+![image](https://github.com/user-attachments/assets/95fffbfe-36a1-47fa-ac9e-d35cad3b44fd)
+
+
+
 ## :thought_balloon: 회고
 ### [허예은](https://github.com/yyyeun)
 > 직접 Entity와 그 관계를 설계하며 Join에 대한 이해도를 높일 수 있었습니다. OJT 문제를 출제하며 활용했던 Core 개념이 기억에 오래 남을 것 같습니다.
