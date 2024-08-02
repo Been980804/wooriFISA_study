@@ -9,7 +9,7 @@
   - [실습환경](#rocket-#실습환경)
   - [ER 다이어그램](#floppy_disk-ER-다이어그램)
   - [실행](#globe_with_meridians-실행)
-  - [트러블슈팅](#hammer-트러블슈팅)
+  - [OJT 문제 출제](#sparkles-OJT-문제-출제)
   - [회고](#thought_balloon-회고)
 
 </details>
@@ -45,8 +45,11 @@
 ![erderd](https://github.com/user-attachments/assets/b8b8895d-1b51-468d-b6e3-2386b3cc8390)
 
 ### Member 테이블
+- 유저, 사업자, 관리자를 모두 포함하는 회원 테이블입니다.
 ### Product 테이블
+- 구독할 상품의 정보에 대한 테이블입니다.
 ### Subscribe 테이블
+- 각 유저가 생성하는 구독 플랜에 대한 테이블입니다.
 
 <br/>
 
@@ -83,17 +86,34 @@ JOIN PRODUCT p ON s.PROD_ID = p.PROD_ID;
 
 <br/>
 
-## ❓문제
+## :sparkles: OJT 문제 출제
 
-### 1. 빈칸을 채워 각 Entity간의 관계(Join)를 설정하시오. (위에 있는 테이블과 ERD를 참고하시오.) - Product, Subscribe
-![image](https://github.com/user-attachments/assets/438f89ec-0aaf-4f6d-a94a-282144c83a3d)
-__________________________________________________________________________________________________________________
-![image](https://github.com/user-attachments/assets/85b13e98-53ef-4aa6-bdaa-a2a9c5e58e88)
+### 1. [ Product, Subscribe ] 빈 칸을 채워 각 Entity간의 관계(Join)를 설정하시오. (상단 Table과 ERD를 참고하시오.)
 
-### 2. 주석을 참고해 빈칸을 채워 코드를 완성하시오.
-![image](https://github.com/user-attachments/assets/95fffbfe-36a1-47fa-ac9e-d35cad3b44fd)
+<br/>
 
+**Product**
+<p align="center">
+  <img width="60%" src="https://github.com/user-attachments/assets/438f89ec-0aaf-4f6d-a94a-282144c83a3d">
+</p>
 
+<br/>
+
+**Subscribe**
+<p align="center">
+  <img width="60%" src="https://github.com/user-attachments/assets/85b13e98-53ef-4aa6-bdaa-a2a9c5e58e88">
+</p>
+
+<br/>
+
+### 2. [ RunningTest ] 빈 칸을 채워 코드를 완성하시오.
+- **Select** : 첫 번째 구독 플랜의 유저 정보 조회
+- **Update** : 첫 번째 구독 플랜의 상품 정보 변경 : 휴지 -> 생수
+<p align="center">
+  <img width="50%" src="https://github.com/user-attachments/assets/95fffbfe-36a1-47fa-ac9e-d35cad3b44fd">
+</p>
+
+<br/>
 
 ## :thought_balloon: 회고
 ### [허예은](https://github.com/yyyeun)
