@@ -96,7 +96,7 @@ sudo nano /etc/postfix/sasl_passwd
 [smtp.gmail.com]:587 your-email@gmail.com:your-password
 ```
 
-![7](https://github.com/user-attachments/assets/a89ec400-ac7d-482e-bfb5-e5547a15b865)
+
 
 
 ### 6. Postfix가 읽을 수 있게 Hash 테이블로 변경 및 파일 권한 설정
