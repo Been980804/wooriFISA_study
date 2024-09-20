@@ -2,7 +2,7 @@
 
 # PAM 모듈 활용하여 비밀번호를 8자리 이상으로 규제하기
 
-## 1. am_pwquality 모듈 설치
+## 1. pam_pwquality 모듈 설치
 ```
 sudo apt-get install libpam-pwquality
 ```
