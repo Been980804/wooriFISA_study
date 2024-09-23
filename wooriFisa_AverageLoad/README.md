@@ -97,6 +97,7 @@ pidstat -u 5 1
 ```
 
 ![img-3](https://github.com/user-attachments/assets/71bc77c3-8060-4150-90c0-2c3816e7d024)
+
 → 평균 부하가 1.00 으로 천천히 증가
 
 <br><br>
