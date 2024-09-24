@@ -1,6 +1,67 @@
 # Docker Image Optimization: Tips & Tricks / Reduce the size of the Docker Image
-
  Docker 이미지 최적화: 팁과 요령/  이미지 크기 줄이기
+ 
+<details>
+<summary>실습</summary>
+<div markdown="1">
+ 
+```java
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            int num = Integer.parseInt(br.readLine());
+            // 구구단
+            for(int i = 1; i <= 9; i++){
+                System.out.println(num + " * "+  i + " = " + num*i);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+```
+  <br>
+  <ul>
+   <li>Alpine 이미지 사용</li>
+   
+   ![image](https://github.com/user-attachments/assets/f795c814-53de-431d-bd3a-e61522e116b9)
+
+   <br>
+   <li>Multi-Stage 빌드</li>
+
+   ![image](https://github.com/user-attachments/assets/8d87c937-c26a-4690-9a5d-d384d41afa14)
+
+   <br>
+   <li>.dockerignore 사용</li>
+
+   ![image](https://github.com/user-attachments/assets/16d236ad-f811-4708-ae8b-3b6b09bf6f0c)
+
+   <br>
+   <li>이미지 빌드 및 설정</li>
+
+   ![image](https://github.com/user-attachments/assets/a5ad75bc-1a62-4086-9ba2-f89641d9b48e)
+
+   <br>
+   <li>docker 로그인</li>
+   
+   ![image](https://github.com/user-attachments/assets/ebc0913c-1a0c-4cf7-b749-89c8fb8c07e9)
+
+   <br>
+   <li>이미지 푸시</li>
+
+   ![image](https://github.com/user-attachments/assets/7a3fc8c7-e5af-4f65-9d65-7a50b95373b6)
+  </ul>
+
+ </div>
+</details>
+
+---
 
 <br>
 
@@ -154,64 +215,3 @@ FROM nginx:<tag>
 
 - 계층을 병합하여 Docker 이미지의 크기 감소
 - 단, 빌드 시간 ↑, 캐시 가능성 ↓ 할 수 있음
-
----
-<details>
-<summary>실습</summary>
-<div markdown="1">
- 
-```java
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.IOException;
-
-public class Main {
-    public static void main(String[] args) {
-        try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            int num = Integer.parseInt(br.readLine());
-            // 구구단
-            for(int i = 1; i <= 9; i++){
-                System.out.println(num + " * "+  i + " = " + num*i);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-}
-
-```
-  <br>
-  <ul>
-   <li>Alpine 이미지 사용</li>
-   
-   ![image](https://github.com/user-attachments/assets/f795c814-53de-431d-bd3a-e61522e116b9)
-
-   <br>
-   <li>Multi-Stage 빌드</li>
-
-   ![image](https://github.com/user-attachments/assets/8d87c937-c26a-4690-9a5d-d384d41afa14)
-
-   <br>
-   <li>.dockerignore 사용</li>
-
-   ![image](https://github.com/user-attachments/assets/16d236ad-f811-4708-ae8b-3b6b09bf6f0c)
-
-   <br>
-   <li>이미지 빌드 및 설정</li>
-
-   ![image](https://github.com/user-attachments/assets/a5ad75bc-1a62-4086-9ba2-f89641d9b48e)
-
-   <br>
-   <li>docker 로그인</li>
-   
-   ![image](https://github.com/user-attachments/assets/ebc0913c-1a0c-4cf7-b749-89c8fb8c07e9)
-
-   <br>
-   <li>이미지 푸시</li>
-
-   ![image](https://github.com/user-attachments/assets/7a3fc8c7-e5af-4f65-9d65-7a50b95373b6)
-  </ul>
-
- </div>
-</details>
