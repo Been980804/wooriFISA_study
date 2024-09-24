@@ -56,8 +56,14 @@ public class Main {
    <li>이미지 푸시</li>
 
    ![image](https://github.com/user-attachments/assets/7a3fc8c7-e5af-4f65-9d65-7a50b95373b6)
-  </ul>
+  
+   <br>
+   <li>확인</li>
 
+   ![image](https://github.com/user-attachments/assets/4e8dff4f-03aa-4abb-8b8f-c6364df0fcfe)
+
+  </ul>
+   
  </div>
 </details>
 
