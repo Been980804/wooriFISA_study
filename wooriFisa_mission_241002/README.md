@@ -108,12 +108,12 @@ docker push been980804/springapp:1.0
 minikube start
 
 # 이미지로 실행
-**kubectl create deployment springapp --image=been980804/springapp:1.0 
+kubectl create deployment springapp --image=been980804/springapp:1.0 
 --replicas=3
 
 # LoadBalncer service
 kubectl expose deployment springapp--type=LoadBalancer --port=80 
---target-port=8999**
+--target-port=8999
 
 minikube addons list
 
