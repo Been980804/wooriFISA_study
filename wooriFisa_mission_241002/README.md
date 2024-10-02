@@ -20,7 +20,8 @@ from diagrams import Diagram, Cluster
 from diagrams.k8s.compute import Deploy, Pod, RS
 from diagrams.k8s.network import Service
 from diagrams.programming.framework import Spring
-from diagrams.onprem.client import User
+from diagrams.k8s.rbac import User
+
 
 with Diagram("CE", show=False) as diag:
     user = User("customer")
