@@ -13,7 +13,8 @@
 
 ### 0. Architecture
 
-![image](https://github.com/user-attachments/assets/36d3a81a-0be5-4eaa-9e3f-fb4ebddfac7d)
+![image](https://github.com/user-attachments/assets/8d4b331d-e254-49da-9edc-811aae485f24)
+
 
 ```
 from diagrams import Diagram, Cluster
@@ -36,9 +37,9 @@ with Diagram("CE", show=False) as diag:
                 Pod("Pod2"),
                 Pod("Pod3")]
 
-        springs = [Spring("spring"),
-                   Spring("spring"),
-                   Spring("spring")]
+        springs = [Spring("springapp"),
+                   Spring("springapp"),
+                   Spring("springapp")]
 
     deployment >> replicatSet >> pods
     
