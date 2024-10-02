@@ -10,6 +10,46 @@
 
 <br>
 
+### 0. Architecture
+
+<img src="https://github.com/user-attachments/assets/4ce1f1f3-2263-44e7-a844-06dca70fa88f">
+
+```
+from diagrams import Diagram, Cluster
+from diagrams.k8s.compute import Deploy, Pod, RS
+from diagrams.k8s.network import Service
+from diagrams.programming.framework import Spring
+from diagrams.onprem.client import User
+
+with Diagram("CE", show=False) as diag:
+    user = User("customer")
+    
+    service = Service("Service")
+
+    with Cluster("Deployment Layer"):
+        deployment = Deploy("SpringApp")
+        replicatSet = RS("Replica Set")
+        
+        pods = [Pod("Pod1"),
+                Pod("Pod2"),
+                Pod("Pod3")]
+
+        springs = [Spring("spring"),
+                   Spring("spring"),
+                   Spring("spring")]
+
+    deployment >> replicatSet >> pods
+    
+    pods[0] >> springs[0]
+    pods[1] >> springs[1]
+    pods[2] >> springs[2]
+
+    user >> service >> pods
+
+diag
+```
+<br>
+
 ### 1. Jenkins와 github 연동
 
 ```bash
