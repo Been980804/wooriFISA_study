@@ -6,13 +6,14 @@
 <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"> 
 <img src="https://img.shields.io/badge/jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white">
 <img src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white">
+<img src="https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white">
 </div>
 
 <br>
 
 ### 0. Architecture
 
-<img src="https://github.com/user-attachments/assets/4ce1f1f3-2263-44e7-a844-06dca70fa88f">
+![image](https://github.com/user-attachments/assets/36d3a81a-0be5-4eaa-9e3f-fb4ebddfac7d)
 
 ```
 from diagrams import Diagram, Cluster
