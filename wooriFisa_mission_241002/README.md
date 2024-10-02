@@ -13,8 +13,7 @@
 
 ### 0. Architecture
 
-![image](https://github.com/user-attachments/assets/8d4b331d-e254-49da-9edc-811aae485f24)
-
+![image](https://github.com/user-attachments/assets/3d2f2c07-9d67-4148-8cdd-db0e25ea133d)
 
 ```
 from diagrams import Diagram, Cluster
@@ -30,22 +29,22 @@ with Diagram("CE", show=False) as diag:
     service = Service("Service")
 
     with Cluster("Deployment Layer"):
-        deployment = Deploy("SpringApp")
+        deployment = Deploy("Deployment")
         replicatSet = RS("Replica Set")
         
         pods = [Pod("Pod1"),
                 Pod("Pod2"),
                 Pod("Pod3")]
 
-        springs = [Spring("springapp"),
-                   Spring("springapp"),
-                   Spring("springapp")]
+        springs = [Spring("SpringApp"),
+                   Spring("SpringApp"),
+                   Spring("SpringApp")]
 
     deployment >> replicatSet >> pods
     
-    pods[0] >> springs[0]
-    pods[1] >> springs[1]
-    pods[2] >> springs[2]
+    pods[0] - springs[0]
+    pods[1] - springs[1]
+    pods[2] - springs[2]
 
     user >> service >> pods
 
