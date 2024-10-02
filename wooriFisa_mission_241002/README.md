@@ -1,5 +1,13 @@
 ## SpringApp K8S에 배포 후 LoadBalancer 확인하기
 
+### 사용 기술
+<div>
+<img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
+<img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"> 
+<img src="https://img.shields.io/badge/jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white">
+<img src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white">
+</div>
+
 <br>
 
 ### 1. Jenkins와 github 연동
@@ -90,6 +98,8 @@ docker build -t been980804/springapp:1.0 .
 docker push been980804/springapp:1.0
 ```
 
+![image](https://github.com/user-attachments/assets/977c1b50-55e1-48b5-8278-e0e1a52f9cc7)
+
 <br>
 
 ### 5. Minikube 시작
@@ -135,9 +145,9 @@ kubectl get services
 
 <br>
 
-### 6. Window에서 접속
+### 6. Window(Host)에서 접속
 
-![image](https://github.com/user-attachments/assets/b31aa863-7463-4472-ad0e-94463b3b3daa)
+![image](https://github.com/user-attachments/assets/4d8cd7a0-9cce-4033-bbef-6c1a6f7ccc13)
 
 <br>
 
@@ -149,4 +159,7 @@ kubectl get services
 
 ![image](https://github.com/user-attachments/assets/5b054bfd-d77f-4beb-87e9-fe1cc12df616)
 
-- 다른 파드에 로그가 찍힌것을 확인 가능
+<br>
+
+### 결론
+- 서로 다른 파드에 전부 로그가 찍힌것을 확인 가능했음
